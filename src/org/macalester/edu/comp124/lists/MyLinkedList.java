@@ -49,19 +49,6 @@ public class MyLinkedList<E> {
         oldEnd.setNext(end);
         tail.setPrev(end);
         numElements++;
-
-   /*     MyLinkedNode<E> end = new MyLinkedNode<E>(elem);
-        if (numElements==0){
-            head = end;
-            head = tail;
-
-        }else{
-            tail.setNext(end);
-            end.setPrev(tail);
-            tail =tail.getNext();
-        }
-        numElements++;
-*/
 	}
 
     /**
