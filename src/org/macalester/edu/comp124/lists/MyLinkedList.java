@@ -75,12 +75,23 @@ public class MyLinkedList<E> {
         for (int p=0; p<i; p++){
             current=current.getNext();
         }
+        addition.setNext(current.getNext());
+        addition.getNext().setPrev(addition);
+        addition.setPrev(current);
+        current.setNext(addition);
+        numElements++;
+ /*       MyLinkedNode<E> addition = new MyLinkedNode<>(elem);
+        MyLinkedNode<E> current=head;
+        for (int p=0; p<i; p++){
+            current=current.getNext();
+        }
         MyLinkedNode<E> after =current.getNext();
         current.setNext(addition);
         addition.setPrev(current);
         addition.setNext(after);
         after.setPrev(addition);
         numElements++;
+        */
 	}
 
     /**
